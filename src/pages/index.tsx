@@ -63,10 +63,18 @@ const Home: NextPage<Props> = ({ posts, commandPalettePosts }) => {
       />
 
       <div className="prose my-12 space-y-2 transition-colors dark:prose-dark md:prose-lg md:space-y-5">
-        <h1 className="text-center sm:text-left">{t('intro-title')}</h1>
-        <p>{t('intro-1')}</p>
-        <p>{t('intro-2')}</p>
-        <p>{t('intro-3')}</p>
+        <h1 className="text-center sm:text-left">{t('Hello World')}</h1>
+        <p>{t('I am Tre')}</p>
+        <p>{t('New Website')}</p>
+        <p>{t('Keeping it simple')}</p>
+        <div className="dark:bg-slate-900">
+          {/* <iframe
+            title="substack"
+            src="https://tregalloway.substack.com/embed"
+            width="480"
+            height="320"
+          ></iframe> */}
+        </div>
       </div>
 
       <div className="my-4 divide-y divide-gray-200 transition-colors dark:divide-gray-700">
