@@ -13,6 +13,8 @@
   "dependencies": {
     "@giscus/react": "^2.2.8",
     "@heroicons/react": "^2.0.16",
+    "@next/env": "*",
+    "@vercel/analytics": "^1.0.0",
     "clsx": "^1.2.1",
     "contentlayer": "^0.2.9",
     "date-fns": "^2.29.3",
