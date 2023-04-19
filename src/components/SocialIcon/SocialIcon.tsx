@@ -5,6 +5,7 @@ import Github from './github.svg';
 import Linkedin from './linkedin.svg';
 import Mail from './mail.svg';
 import Twitter from './twitter.svg';
+import YouTube from './youtube.svg';
 
 // Icons taken from: https://simpleicons.org/
 
@@ -16,10 +17,11 @@ const components: { [key: string]: SVGComponent } = {
   facebook: Facebook as SVGComponent,
   linkedin: Linkedin as SVGComponent,
   twitter: Twitter as SVGComponent,
+  youtube: YouTube as SVGComponent,
 };
 
 type Props = {
-  kind: 'mail' | 'github' | 'facebook' | 'linkedin' | 'twitter';
+  kind: 'mail' | 'github' | 'facebook' | 'linkedin' | 'twitter' | 'youtube';
   href: string;
 };
 
@@ -51,7 +53,9 @@ const SocialIcon = ({ kind, href }: Props) => {
             'hover:text-[#4267B2] dark:hover:text-[#4267B2]',
           kind === 'linkedin' &&
             'hover:text-[#0e76a8] dark:hover:text-[#0e76a8]',
-          kind === 'twitter' && 'hover:text-[#1DA1F2] dark:hover:text-[#1DA1F2]'
+          kind === 'twitter' &&
+            'hover:text-[#1DA1F2] dark:hover:text-[#1DA1F2]',
+          kind === 'youtube' && 'hover:text-[#ef4444] dark:hover:text-[#ef4444]'
         )}
       />
     </a>

@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 
-import Comment from '@/components/Comment';
 import CustomLink from '@/components/CustomLink';
 import PageTitle from '@/components/PageTitle';
 import PostBody from '@/components/PostBody';
@@ -43,7 +42,7 @@ export default function PostLayout({
 
   return (
     <article>
-      <div className="divide-y divide-gray-200 transition-colors dark:divide-gray-700">
+      <div className="transition-colors divide-y divide-gray-200 dark:divide-gray-700">
         <header className="py-6">
           <div className="space-y-1 text-center">
             <div className="mb-4">
@@ -65,7 +64,7 @@ export default function PostLayout({
           className="pb-8 transition-colors lg:grid lg:grid-cols-4 lg:gap-x-6"
           style={{ gridTemplateRows: 'auto 1fr' }}
         >
-          <div className="divide-y divide-gray-200 pt-10 pb-8 transition-colors dark:divide-gray-700 lg:col-span-3">
+          <div className="pt-10 pb-8 transition-colors divide-y divide-gray-200 dark:divide-gray-700 lg:col-span-3">
             <PostBody>{children}</PostBody>
           </div>
 
@@ -77,19 +76,17 @@ export default function PostLayout({
           </aside>
         </div>
 
-        <div className="divide-y divide-gray-200 pb-8 transition-colors dark:divide-gray-700">
-          <Comment />
-
+        <div className="pb-8 transition-colors divide-y divide-gray-200 dark:divide-gray-700">
           <footer>
             <div className="flex flex-col gap-4 pt-4 text-base font-medium sm:flex-row sm:justify-between xl:gap-8 xl:pt-8">
               {prevPost ? (
                 <div className="basis-6/12">
-                  <h2 className="mb-1 text-xs uppercase tracking-wide text-gray-500 transition-colors dark:text-gray-400">
+                  <h2 className="mb-1 text-xs tracking-wide text-gray-500 uppercase transition-colors dark:text-gray-400">
                     {t('previous-article')}
                   </h2>
                   <CustomLink
                     href={prevPost.path}
-                    className="text-primary-500 transition-colors hover:text-primary-600 dark:hover:text-primary-400"
+                    className="transition-colors text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                   >
                     &larr; {prevPost.title}
                   </CustomLink>
@@ -99,12 +96,12 @@ export default function PostLayout({
               )}
               {nextPost && (
                 <div className="basis-6/12">
-                  <h2 className="mb-1 text-left text-xs uppercase tracking-wide text-gray-500 transition-colors dark:text-gray-400 sm:text-right">
+                  <h2 className="mb-1 text-xs tracking-wide text-left text-gray-500 uppercase transition-colors dark:text-gray-400 sm:text-right">
                     {t('next-article')}
                   </h2>
                   <CustomLink
                     href={nextPost.path}
-                    className="block text-primary-500 transition-colors hover:text-primary-600 dark:hover:text-primary-400 sm:text-right"
+                    className="block transition-colors text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 sm:text-right"
                   >
                     {nextPost.title} &rarr;
                   </CustomLink>

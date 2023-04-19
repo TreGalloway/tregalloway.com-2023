@@ -1,11 +1,12 @@
 export const footerConfigs = {
-  credit: 'Stark Industries',
+  credit: 'Tre Galloway',
   socialLinks: {
-    email: 'stark@example.com',
+    email: 'tre@tregalloway.com',
     github:
       'https://github.com/Kamigami55/nextjs-tailwind-contentlayer-blog-starter',
-    twitter: 'https://twitter.com/EasonChang_me',
+    twitter: 'https://twitter.com/Bytregalloway',
     facebook: 'https://www.facebook.com/eason.blog',
-    linkedin: 'https://www.linkedin.com/in/easonchang101',
+    linkedin: 'https://www.linkedin.com/in/tregalloway',
+    youtube: 'https://www.youtube.com/@tregalloway',
   },
 };

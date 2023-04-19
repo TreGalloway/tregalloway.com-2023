@@ -43,7 +43,7 @@ export default function CommandPalette({ children }: Props) {
       name: t('home'),
       keywords: 'home homepage index 首頁',
       perform: () => router.push('/'),
-      icon: <HomeIcon className="h-6 w-6" />,
+      icon: <HomeIcon className="w-6 h-6" />,
       section: {
         name: t('page'),
         priority: Priority.HIGH,
@@ -56,7 +56,7 @@ export default function CommandPalette({ children }: Props) {
       name: t('posts'),
       keywords:
         'search find posts writing words blog articles thoughts 搜尋 尋找 文章 寫作 部落格',
-      icon: <MagnifyingGlassIcon className="h-6 w-6" />,
+      icon: <MagnifyingGlassIcon className="w-6 h-6" />,
       section: t('search'),
     },
     // Operation section
@@ -65,7 +65,7 @@ export default function CommandPalette({ children }: Props) {
       id: 'theme',
       name: t('toggle-theme'),
       keywords: 'change toggle theme mode color 切換 更換 顏色 主題 模式',
-      icon: <LightBulbIcon className="h-6 w-6" />,
+      icon: <LightBulbIcon className="w-6 h-6" />,
       section: t('operation'),
     },
     {
@@ -73,7 +73,7 @@ export default function CommandPalette({ children }: Props) {
       name: t('light-mode'),
       keywords: 'theme light white mode color 顏色 主題 模式 明亮 白色',
       perform: () => setTheme('light'),
-      icon: <SunIcon className="h-6 w-6" />,
+      icon: <SunIcon className="w-6 h-6" />,
       parent: 'theme',
       section: t('operation'),
     },
@@ -82,19 +82,19 @@ export default function CommandPalette({ children }: Props) {
       name: t('dark-mode'),
       keywords: 'theme dark black mode color 顏色 主題 模式 暗黑 黑色 深夜',
       perform: () => setTheme('dark'),
-      icon: <MoonIcon className="h-6 w-6" />,
+      icon: <MoonIcon className="w-6 h-6" />,
       parent: 'theme',
       section: t('operation'),
     },
     // - Language toggle
-    {
-      id: 'language',
-      name: t('toggle-language'),
-      keywords:
-        'change toggle locale language translation 切換 更換 語言 語系 翻譯',
-      icon: <LanguageIcon className="h-6 w-6" />,
-      section: t('operation'),
-    },
+    // {
+    //   id: 'language',
+    //   name: t('toggle-language'),
+    //   keywords:
+    //     'change toggle locale language translation 切換 更換 語言 語系 翻譯',
+    //   icon: <LanguageIcon className="w-6 h-6" />,
+    //   section: t('operation'),
+    // },
   ];
 
   return (
@@ -108,9 +108,9 @@ export default function CommandPalette({ children }: Props) {
 function CommandBar() {
   return (
     <KBarPortal>
-      <KBarPositioner className="z-20 flex items-center bg-gray-400/70 p-2 backdrop-blur-sm dark:bg-gray-900/80">
+      <KBarPositioner className="z-20 flex items-center p-2 bg-gray-400/70 backdrop-blur-sm dark:bg-gray-900/80">
         <KBarAnimator className="box-content w-full max-w-[600px] overflow-hidden rounded-xl border border-gray-400 bg-white/80 p-2 dark:border-gray-600 dark:bg-gray-700/80">
-          <KBarSearch className="flex h-16 w-full bg-transparent px-4 outline-none" />
+          <KBarSearch className="flex w-full h-16 px-4 bg-transparent outline-none" />
           <RenderResults />
         </KBarAnimator>
       </KBarPositioner>
